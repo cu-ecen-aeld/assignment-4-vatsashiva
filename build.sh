@@ -2,6 +2,8 @@
 #Script to build buildroot configuration
 #Author: Siddhant Jajoo
 
+set -e 
+export FORCE_UNSAFE_CONFIGURE=1
 source shared.sh
 
 EXTERNAL_REL_BUILDROOT=../base_external
@@ -9,7 +11,6 @@ git submodule init
 git submodule sync
 git submodule update
 
-set -e 
 cd `dirname $0`
 
 if [ ! -e buildroot/.config ]
