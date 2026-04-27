@@ -1,0 +1,4 @@
+config BR2_PACKAGE_LDD
+	bool "ldd"
+	help
+	  Builds and installs misc-modules and scull from the ldd3 repository
